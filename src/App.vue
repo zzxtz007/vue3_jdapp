@@ -1,12 +1,14 @@
 <template>
-  <login></login>
+  <Login></Login>
 </template>
 <script>
-import Login from "./views/login/Login.vue";
+// import Home from "@/views/home/Home.vue";
+import Login from "@/views/login/Login.vue";
 export default {
   name: "App",
-  components: { Login },
+  components: {
+    // Home,
+    Login,
+  },
 };
 </script>
-
-<style lang="scss"></style>

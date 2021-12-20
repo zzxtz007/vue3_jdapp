@@ -6,7 +6,7 @@
     </div>
 
     <div class="warpper__input">
-      <input type="text" class="warpper__input__content" />
+      <input type="password" class="warpper__input__content" />
     </div>
 
     <div class="warpper__login-button">登录</div>
