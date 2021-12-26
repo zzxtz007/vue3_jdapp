@@ -16,25 +16,30 @@
         type="password"
       />
     </div>
+    <div class="warpper__input">
+      <input
+        class="warpper__input__content"
+        placeholder="请确认密码"
+        type="password"
+      />
+    </div>
 
-    <div class="warpper__login-button" @click="handleLogin">登录</div>
-    <div class="warpper__regerst" @click="handleRegisterClick">立即注册</div>
+    <div class="warpper__register-button">立刻注册</div>
+    <div class="warpper__regerst-link" @click="handleLoginClick">
+      已有账号？立刻登录
+    </div>
   </div>
 </template>
 <script>
 import { useRouter } from "vue-router";
 export default {
-  name: "login",
+  name: "register",
   setup() {
     const router = useRouter();
-    const handleLogin = () => {
-      localStorage.isLogin = true;
-      router.push({ name: "Home" });
+    const handleLoginClick = () => {
+      router.push({ name: "Login" });
     };
-    const handleRegisterClick = () => {
-      router.push({ name: "Register" });
-    };
-    return { handleLogin, handleRegisterClick };
+    return { handleLoginClick };
   },
 };
 </script>
@@ -74,7 +79,7 @@ export default {
       }
     }
   }
-  &__login-button {
+  &__register-button {
     background: #0091ff;
     line-height: 0.48rem;
     font-size: 0.16rem;
@@ -85,7 +90,7 @@ export default {
     color: #fff;
     margin: 0.32rem 0.4rem 0.16rem 0.4rem;
   }
-  &__regerst {
+  &__regerst-link {
     font-size: 0.16rem;
     text-align: center;
     color: $content-notice-fontcolor;
